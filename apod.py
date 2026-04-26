@@ -2,10 +2,10 @@ import requests # requests lets us make HTTP calls to external APIs (like fetchi
 import os   ## os lets us read system-level things like they were environment variables
 from dotenv import load_dotenv  # load_dotenv is the function we need from the dotenv library to read our .env file
 
-# actually reads the .env file and loads its contents into our current environment
+# actually reads the .env file and loads its contents into our current environment memory.
 load_dotenv()
 
-# os.getenv looks up the variable named "NASA_API_KEY" from the .env file we just loaded
+# os.getenv looks up the variable named "NASA_API_KEY" from the .env file we just LOADED.
 API_KEY = os.getenv("NASA_API_KEY")
 URL = "https://api.nasa.gov/planetary/apod"
 # this is the endpoint URL for the APOD API — the address we send our request to. Found on the NASA API documentation page for APOD: https://api.nasa.gov
